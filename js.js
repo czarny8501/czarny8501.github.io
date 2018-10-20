@@ -1,4 +1,5 @@
 const changePage = (ev) => {
+  ev.preventDefault();
   const page = ev.target.textContent.toLowerCase();
   const xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = () => {
