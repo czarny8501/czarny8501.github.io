@@ -3,8 +3,7 @@ const changePage = (ev) => {
   const page = ev.target.textContent.toLowerCase();
   const xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = () => {
-    
-    this.readyState == 4 && this.status == 200 ? console.log('response : '+this.responseText) : null;
+    this.readyState == 4 && this.status == 200 ? console.log('response : ') : null;
   };
   xhttp.open('GET', `pages/${page}.html`, true);
   xhttp.send();
