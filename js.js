@@ -8,7 +8,7 @@ const changePage = (ev) => {
       
     }
   };
-  xhttp.open('GET', `pages/${page}.html`, true);
+  xhttp.open('GET', `https://czarny8501.github.io/pages/${page}.html`, true);
   xhttp.send();
   document.getElementById('content').innerHTML = this.responseText;
   console.log(this.responseText);
