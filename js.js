@@ -11,6 +11,7 @@ const changePage = (ev) => {
   xhttp.open('GET', `pages/${page}.html`, true);
   xhttp.send();
   document.getElementById('content').innerHTML = this.responseText;
+  console.log(this.responseText);
 }
 
 const pages = document.getElementsByClassName('menu');
