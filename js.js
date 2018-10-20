@@ -3,11 +3,11 @@ const changePage = (ev) => {
   const page = ev.target.textContent.toLowerCase();
   const xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = () => {
-    if(this.readyState == 4 && this.status == 200) {
+    if(xhttp.readyState == 4 && xhttp.status == 200) {
       console.log('elo');
-      document.getElementById('content').innerHTML = this.responseText;
+      document.getElementById('content').innerHTML = xhttp.responseText;
       console.log(`https://czarny8501.github.io/pages/${page}.html`);
-      console.log(this.responseText);
+      console.log(xhttp.responseText);
     }
   };
   xhttp.open('GET', `https://czarny8501.github.io/pages/${page}.html`, true);
