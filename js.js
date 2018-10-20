@@ -12,4 +12,4 @@ const changePage = (ev) => {
 }
 
 const pages = document.getElementsByClassName('menu');
-Array.from(pages).forEach( el => el.addEventListener('click', changePage));
+Array.from(pages).forEach( el => el.addEventListener('click', changePage));a
