@@ -11,9 +11,10 @@ const changePage = (ev) => {
     }
   };
   xhttp.open('GET', `https://czarny8501.github.io/pages/${page}.html`, true);
+  console.log(`https://czarny8501.github.io/pages/${page}.html`);
   xhttp.send();
   document.getElementById('content').innerHTML = xhttp.responseText;
-  console.log(`https://czarny8501.github.io/pages/${page}.html`);
+  
   console.log(xhttp.responseText);
 }
 
