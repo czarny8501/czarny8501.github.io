@@ -12,9 +12,9 @@ const changePage = (ev) => {
   };
   xhttp.open('GET', `https://czarny8501.github.io/pages/${page}.html`, true);
   xhttp.send();
-  document.getElementById('content').innerHTML = this.responseText;
-      console.log(`https://czarny8501.github.io/pages/${page}.html`);
-      console.log(this.responseText);
+  document.getElementById('content').innerHTML = xhttp.responseText;
+  console.log(`https://czarny8501.github.io/pages/${page}.html`);
+  console.log(xhttp.responseText);
 }
 
 const pages = document.getElementsByClassName('menu');
