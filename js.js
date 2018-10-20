@@ -4,18 +4,11 @@ const changePage = (ev) => {
   const xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = () => {
     if(xhttp.readyState == 4 && xhttp.status == 200) {
-      console.log('elo');
       document.getElementById('content').innerHTML = xhttp.responseText;
-      console.log(`https://czarny8501.github.io/pages/${page}.html`);
-      console.log(xhttp.responseText);
     }
   };
   xhttp.open('GET', `https://czarny8501.github.io/pages/${page}.html`, true);
-  console.log(`https://czarny8501.github.io/pages/${page}.html`);
   xhttp.send();
-  document.getElementById('content').innerHTML = xhttp.responseText;
-  
-  console.log(xhttp.responseText);
 }
 
 const pages = document.getElementsByClassName('menu');
