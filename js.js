@@ -5,11 +5,12 @@ const changePage = (ev) => {
   xhttp.onreadystatechange = () => {
     if(this.readyState == 4 && this.status == 200) {
       console.log('elo');
-      document.getElementById('content').innerHTML = this.responseText;
+      
     }
   };
   xhttp.open('GET', `pages/${page}.html`, true);
   xhttp.send();
+  document.getElementById('content').innerHTML = this.responseText;
 }
 
 const pages = document.getElementsByClassName('menu');
