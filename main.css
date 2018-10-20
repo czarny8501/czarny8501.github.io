@@ -91,3 +91,23 @@ footer {
   text-align: center;
   margin-top: 10px;
 }
+
+.photo {
+  margin: 10px 0;
+  width: 120px;
+  background-color: #ffffff;
+  padding: 10px;
+  opacity: 0.7;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.photo img {
+  flex-basis: 100%;
+  width: 100px;
+}
+
+.photo figcaption 
