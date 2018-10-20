@@ -1,6 +1,3 @@
-const pages = document.getElementsByClassName('menu');
-Array.from(pages).forEach( el => el.addEventListener('click', changePage));
-
 const changePage = (ev) => {
   ev.preventDefault();
   const page = ev.target.textContent.toLowerCase();
@@ -13,3 +10,6 @@ const changePage = (ev) => {
   xhttp.open('GET', `https://czarny8501.github.io/pages/${page}.html`, true);
   xhttp.send();
 }
+
+const pages = document.getElementsByClassName('menu');
+Array.from(pages).forEach( el => el.addEventListener('click', changePage));
