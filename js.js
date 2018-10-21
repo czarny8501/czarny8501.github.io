@@ -15,3 +15,29 @@ const changePage = (ev) => {
 }
 
 Array.from(pages).forEach(el => el.addEventListener('click', changePage));
+
+const targetNode = document.getElementById('content');
+const callback = (mutationsList, observer) => {
+  for(var mutation of mutationsList) {
+    if (mutation.type == 'childList') {
+      const modal = document.getElementById('myModal');
+      const photos = document.getElementsByClassName('photo');
+      const modalImg = document.getElementById('img01');
+      const captionText = document.getElementById('caption');
+
+      const showPhoto = (ev) => {
+        modal.style.display = 'block';
+        modalImg.src = ev.target.src;
+        captionText.innerHTML = ev.target.alt;
+      }
+
+      const span = document.getElementById('close');
+      span.onclick = () => modal.style.display = 'none';
+
+      Array.from(photos).forEach(el => el.firstElementChild.addEventListener('click', showPhoto));
+    }
+    
+  }
+}
+const observer = new MutationObserver(callback);
+observer.observe(targetNode, {childList: true});
