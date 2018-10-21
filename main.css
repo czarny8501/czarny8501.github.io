@@ -113,7 +113,6 @@ footer {
 }
 
 .photo img {
-  flex-basis: 100%;
   width: 100px;
   height: auto;
 }
